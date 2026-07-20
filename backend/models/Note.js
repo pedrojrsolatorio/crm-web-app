@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const noteSchema = new mongoose.Schema(
   {
     owner: {
-      type: mongoose.Schema.Types.ObectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
       index: true,
