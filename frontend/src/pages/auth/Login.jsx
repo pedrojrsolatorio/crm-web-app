@@ -36,7 +36,7 @@ export default function Login() {
   // Convenience: pre-fill the seeded demo credentials.
   const useDemo = () => {
     setValue("email", "test@gmail.com");
-    setValue("password", "Test@1234");
+    setValue("password", "password");
   };
 
   return (
