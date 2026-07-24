@@ -43,7 +43,7 @@ export const tasksApi = {
   remove: (id) => api.delete(`/tasks/${id}`),
 };
 
-/* ── AI (canned mock responses) ─────────────────────────────────────── */
+/* ── AI ─────────────────────────────────────── */
 export const aiApi = {
   status: () => api.get("/ai/status"),
   leadSummary: (data) => api.post("/ai/lead-summary", data),
@@ -51,8 +51,7 @@ export const aiApi = {
   salesInsights: (data) => api.post("/ai/sales-insights", data),
 };
 
-/* ── Analytics (computed from the in-memory leads, so the dashboard always
-      matches the Leads/Pipeline pages) ──────────────────────────────────── */
+/* ── Analytics ──────────────────────────────────── */
 export const analyticsApi = {
   overview: () => api.get("/analytics/overview"),
 };

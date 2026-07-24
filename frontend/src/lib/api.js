@@ -3,7 +3,7 @@ export const TOKEN_KEY = "clientflow_crm_token";
 
 const baseURL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
-const api = axios.create({ baseURL });
+const api = axios.create({ baseURL, timeout: 15000 });
 
 // Attach the JWT to every request if we have one.
 api.interceptors.request.use((config) => {
