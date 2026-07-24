@@ -225,6 +225,12 @@ const emailFor = (name, domain) => `${slug(name.split(" ")[0])}@${domain}`;
 const run = async () => {
   await connectDB();
 
+  if (process.env.NODE_ENV === "production") {
+    throw new Error(
+      "Refusing to run the seed script against a production environment.",
+    );
+  }
+
   let user = await User.findOne({ email: "test@gmail.com" });
   if (user) {
     await Promise.all([
